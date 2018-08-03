@@ -43,7 +43,7 @@ export default {
 
 <style scoped>
 .home__blog {
-  justify-content: space-between;
+  justify-content: flex-start;
   display: flex;
   flex-wrap: wrap;
 }
@@ -62,6 +62,7 @@ export default {
 @media (min-width: 1024px) {
   .home__card.normal {
     width: 31%;
+    max-width: 32%;
     flex-grow: 1;
   }
   .home__card.double {
