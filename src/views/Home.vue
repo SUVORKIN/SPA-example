@@ -2,19 +2,22 @@
   <div class="home">
     <section>
       <div class="home__blog container">
-        <router-link 
-          v-for="post in posts" :key="post.id" 
+          <card 
+            v-for="post in posts" :key="post.id" 
+            class="home__card" :class="post.type" :_post="post"/>
+        <!-- <router-link  
           :to="'/post' + post.id"
           class="home__card" :class="post.type">
           <h3>{{post.title}}</h3>
           <p>{{post.description}}</p>
-        </router-link>
+        </router-link> -->
       </div>
     </section>
   </div>
 </template>
 
 <script>
+import card from './../components/card.vue'
 
 export default {
   name: 'home',
@@ -36,6 +39,9 @@ export default {
   },
   created () {
       this.loadData()
+  },
+  components: {
+    card
   }
 }
 </script>
@@ -62,8 +68,6 @@ export default {
   .home__card.normal {
     width: 31%;
     flex-grow: 1;
-    /* flex-shrink: 1; */
-
   }
   .home__card.double {
     width: 64%;

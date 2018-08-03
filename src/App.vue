@@ -18,7 +18,7 @@ export default {
     navigationHeader,
     futer
   }
-};
+}
 </script>
 <style>
 body {
