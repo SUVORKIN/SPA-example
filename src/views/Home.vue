@@ -2,15 +2,10 @@
   <div class="home">
     <section>
       <div class="home__blog container">
-          <card 
-            v-for="post in posts" :key="post.id" 
-            class="home__card" :class="post.type" :_post="post"/>
-        <!-- <router-link  
-          :to="'/post' + post.id"
-          class="home__card" :class="post.type">
-          <h3>{{post.title}}</h3>
-          <p>{{post.description}}</p>
-        </router-link> -->
+        <card 
+          v-for="post in posts" :key="post.id" 
+          class="home__card" :class="post.type" :_post="post"
+          />
       </div>
     </section>
   </div>
