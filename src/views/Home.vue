@@ -54,20 +54,16 @@ export default {
   background-size: cover;
   background-position: center;
   margin: 3px 3px;
-  padding: 5px;
   text-shadow: 1px 1px 0px rgba(150, 150, 150, 1);
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
   border-radius: 2px;
 }
 @media (min-width: 1024px) {
   .home__card.normal {
-    width: 31%;
-    max-width: 32%;
-    flex-grow: 1;
+    width: calc(33% - 3px);
   }
   .home__card.double {
-    width: 64%;
-    flex-grow: 1;
+    width: calc(33% * 2);
   }
  }
 @media (max-width: 1024px) {
@@ -76,7 +72,7 @@ export default {
     flex-grow: 0;
   }
   .home__card.normal {
-    width: calc(50% - 20px);
+    width: calc(50% - 6px);
     flex-grow: 0;
   }
 }

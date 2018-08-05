@@ -1,8 +1,10 @@
 <template>
   <router-link 
     :to="'/post' + _post.id">
-    <h3>{{_post.title}}</h3>
+    <div class="card__content">
+      <h3>{{_post.title}}</h3>
     <p>{{_post.description}}</p>
+    </div>
   </router-link>
 </template>
 
@@ -18,5 +20,8 @@ export default {
 <style scoped>
  a {
   color: #fff;
+}
+.card__content {
+  padding: 3px 3px 3px 5px;
 }
 </style>
